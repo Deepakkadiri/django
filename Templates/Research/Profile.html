@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>VIT-AP University</title>
+	<link rel="icon" type="image/png" href="https://vtop2.vitap.ac.in/vtop/assets/img/favicon.png">
+	<link rel="stylesheet"href="{% static "Profile_files/jquery-ui.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/bootstrap.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/bootstrapValidator.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/font-awesome.min.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/AdminLteCompatibility.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/VTopScrollbar.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/VTop.css" %}">
+	<link rel="stylesheet"href="{% static "Profile_files/scrollableTable.css" %}">
+	<style>
+		#td1 {
+			background-color: #f2dede;
+		}
+
+		#td2 {
+			background-color: #d4d3d3;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;">
+	<div id="page_outline">
+		<div id="page-holder" class="trim">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+					<div class="container">
+						<img src="{% static "test_files/new VIT_AP logo.png"  %}" class="img-responsive pull-left" alt="User Image"
+							width="170" height="50">
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;">V-Top</h3>
+					</div>
+				</nav>
+			</header>
+
+			<!-- Main content -->
+			<section class="content">
+				<div class="col-md-12 box box-info">
+					<strong style="color: red;"></strong><br><br>
+					<div align="center" id="exTab1">
+						<ul class="nav nav-pills">
+							<li class="active"><a href = "#" data-toggle="tab"
+									style="margin-left: 10px;" aria-expanded="true">Profile</a></li>
+						</ul>
+						<div class="tab-content clearfix">
+							<div class="tab-pane active" id="1a">
+								<div class="table-responsive">
+									<div style="margin: 2px 20px 20px 20px;">
+										<table class="table table-responsive table-bordered">
+											<tbody>
+												<tr><td colspan="3"	style="background-color: #afbadc; font-weight: bold; text-align: center">	Personal Information</td></tr>
+
+												<tr><td	style="background-color: #d4d3d3; font-weight: bold; width: 30%"> Faculty ID</td><td style="background-color: #f2dede; width: 60%;">998587</td><td style="background-color: #d4d3d3;" rowspan="4" align="right"><img src="{% static "Profile_files/navatar.png" %}" class="img-rounded" alt="Image Not Available" width="120" height="130" style="border: solid 2px #3c8dbc; text-align: center;"></td></tr>
+
+												<tr><td id="td2">Faculty Name</td><td id="td1">Dr.Ajith Jubilson</td></tr>
+
+												<tr><td style="background-color: #d4d3d3; font-weight: bold; width: 30%">Date Of Birth</td><td id="td1">21-April-1975</td></tr>
+
+												<tr><td id="td2">Gender</td><td id="td1">MALE</td></tr>
+
+												<tr><td id="td2">Blood Group</td><td id="td1" colspan="2">O-</td></tr>
+
+												<tr><td id="td2">Physically Challenged</td><td id="td1" colspan="2">NO</td></tr>
+
+												<tr><td id="td2">Community</td><td id="td1" colspan="2">GENERAL / OC</td></tr>
+
+												<tr><td id="td2">Religion</td><td id="td1" colspan="2">HINDU</td></tr>
+
+												<tr><td id="td2">Nationality</td><td id="td1" colspan="2">INDIAN</td></tr>
+
+												<tr><td colspan="3"	style="background-color: #afbadc; font-weight: bold; text-align: center">	School Information</td></tr>
+
+												<tr><td id="td2">VIT Register Number</td><td id="td1">21PHD9031</td><td id="td1"></td></tr>
+
+												<tr><td id="td2">VIT-AP Email</td><td id="td1" colspan="2">ajithjubilson@vitap.ac.in</td></tr>
+
+												<tr><td id="td2">Branch</td><td id="td1" colspan="2">Computer Science and Engineering with a Core in Core Only</td></tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+</body>
+</html>

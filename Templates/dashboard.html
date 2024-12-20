@@ -1,0 +1,768 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<title>VIT-AP University</title>
+
+	<link rel="icon" type="image/png" href="https://vtop2.vitap.ac.in/vtop/assets/img/favicon.png">
+	<link rel="stylesheet" href="{% static "VIT-AP University_files/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "VIT-AP University_files/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "VIT-AP University_files/AdminLteCompatibility.css" %}">
+	<link rel="stylesheet" href="{% static "VIT-AP University_files/VTop.css" %}">
+	<script src="{% static "dashboard_files/jquery-3.3.1.js.download" %}" %}"></script>
+	<script src="https://kit.fontawesome.com/5859e30401.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;">
+	<div id="page_outline">
+		<div id="page-holder" class="trim">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top VTopHeader">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<div class="navbar-brand">
+								<span>
+									<span class="VITLogoStyle">VIT-AP</span></span>
+							</div>
+						</div>
+
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="hidden-xs nav navbar-nav navbar-right" style="margin:auto;">
+								<li>
+									<a data-toggle="dropdown" class="dropdown-toggle small" href="/#">
+										<span class="VTopHeaderStyle"><img
+												src="{% static "dashboard_files/navatar.png" %}"
+												class="img-circle img_icon_size" alt="User Image">
+											<span>21BCE9031(STUDENT)</span>
+											<span><b class="caret"></b></span></span>
+									</a>
+									<ul class="dropdown-menu VTopHeaderMenu">
+										
+										
+										<li>
+											<div class="btn-group btn-group-justified">
+												<a class="btn btn-success" href="/admin/logout/">Sign out</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<script>
+					$(document).ready(function () {
+						$("body").css("padding-top", $(".navbar-fixed-top").height());
+					});
+
+
+					function toggleVTopMenu() {
+						$("#wrapper").toggleClass("menuDisplayed");
+						if (window.matchMedia('(max-width: 767px)').matches) {
+							$('#button-panel').toggle();
+						}
+					}
+
+					function toggleButtonMenuItem() {
+						if (window.matchMedia('(max-width: 767px)').matches) {
+							$('#button-panel').toggle();
+						}
+					}
+				</script>
+
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 trim">
+						<div id="wrapper" class="">
+							<div id="sidebar-wrapper" class="hidden-xs nav nav-sidebar">
+								<aside>
+
+									<div class="panel-group" role="tablist" id="accordian1">
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody2"
+														aria-expanded="false"> <i class="fa fa-briefcase"
+															style="width:23px" ;=""></i> My Info </a></h4>
+											</div>
+											<div id="MenuBody2" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/my/adletter" target="blank" id="ADM0223">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Provisional
+																Admission Letter</a></li>
+
+														<li><a href="/my/Profile" target="blank" id="STA002">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Profile</a></li>
+
+														<li><a href="/my/Credits" target="blank" id="ACD0233">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Credits
+																Distribution</a></li>
+
+														<li><a href="/my/Attendance" target="blank" id="RSH0056">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>Attendance</a></li>
+
+														<li><a href="/se/ViewCourses" target="blank" id="ALU0002">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Registered Courses List</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody3"
+														aria-expanded="false"> <i class="fa fa-info-circle"
+															style="width:23px" ;=""></i> Info Corner </a></h4>
+											</div>
+											<div id="MenuBody3" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/In/ViewCirculars" target="blank" id="ACD0147">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> View Circular(s)</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody5"
+														aria-expanded="false"> <i class="fa fa-graduation-cap"
+															style="width:23px" ;=""></i> Academics </a></h4>
+											</div>
+
+											<div id="MenuBody5" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/ac/Facultyinfo" target="blank" id="ACD0167">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Faculty Info</a>
+														</li>
+
+														<li><a href="/my/CoursePage" target="blank" id="ACD0045">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Course Page</a></li>
+
+
+														<li><a href="/ac/timetable" target="blank" id="ACD0034">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Time Table</a></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody6"
+														aria-expanded="false"> <i class="fa fa-bank" style="width:23px"
+															;=""></i> Research </a></h4>
+											</div>
+
+											<div id="MenuBody6" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/re/MyResearchProfile" target="blank" id="RSH0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> My Research
+																Profile</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody7"
+														aria-expanded="false"> <i class="fa fa-book" style="width:23px"
+															;=""></i> Examination </a></h4>
+											</div>
+
+											<div id="MenuBody7" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/ex/ExamsSchedule" target="blank" id="EXM0006">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Exam Schedule</a>
+														</li>
+
+														<li><a href="/ex/Results" target="blank" id="EXM0011">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Marks</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody8"
+														aria-expanded="false"> <i class="fa fa-space-shuttle"
+															style="width:23px" ;=""></i> Services </a></h4>
+											</div>
+											<div id="MenuBody8" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/se/TransportRegistration" target="blank"
+																id="TR0002">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Transport
+																Registration</a></li>
+
+														<li><a href="/se/AddCourse" target="blank" id="PAT0002">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Course
+																Registration</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody9"
+														aria-expanded="false"> <i class="fa fa-bank" style="width:23px"
+															;=""></i> Library </a></h4>
+											</div>
+											<div id="MenuBody9" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/li/Ebook" target="blank" id="BON0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Books</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody10"
+														aria-expanded="false"> <i class="fa fa-certificate"
+															style="width:23px" ;=""></i> Bonafide </a></h4>
+											</div>
+											<div id="MenuBody10" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/bo/Bonafide" target="blank" id="BON0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Apply Bonafide</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody11"
+														aria-expanded="false"> <i class="fa fa-cc-visa"
+															style="width:23px" ;=""></i> Online Payments </a></h4>
+											</div>
+											<div id="MenuBody11" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/pa/Invoice" target="blank" id="FIN10">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Invoices</a></li>
+
+														<li><a href="/pa/Payment" target="blank" id="FIN11">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Payment Receipts</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody12"
+														aria-expanded="false"> <i class="fa fa-home" style="width:23px"
+															;=""></i> Hostels </a></h4>
+											</div>
+											<div id="MenuBody12" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+													</ul>
+													<div class="panel-group" role="tablist" id="accordian2">
+														<div class="panel panel-default">
+															<div class="panel-heading" role="tab">
+																<h4 class="menu-title"><a data-toggle="collapse"
+																		class="text-capitalize"
+																		data-parent="#accordian2" href="/#MenuBody13"
+																		aria-expanded="false">
+																		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																			class="fa fa-user"></i> Counselling </a>
+																</h4>
+															</div>
+															<div id="MenuBody13" class="panel-collapse collapse">
+																<div class="panel-body">
+																	<ul class="nav">
+
+																		<li><a href="/ho/Registration" target="blank"
+																				id="HSL0150">
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				<i class="fa fa-dot-circle-o"
+																					style="padding-right:2px;"></i>
+																				Hostel Registration</a></li>
+
+																		<li><a href="/ho/ProvisionalAllotmentletter"
+																				target="blank" id="HSL0099">
+																				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				<i class="fa fa-dot-circle-o"
+																					style="padding-right:2px;"></i>
+																				Provisional Allotment Letter</a></li>
+
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody14"
+														aria-expanded="false"> <i class="fa fa-shield"
+															style="width:23px" ;=""></i>Co-Curricular Activities</a>
+												</h4>
+											</div>
+											<div id="MenuBody14" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/ot/eco" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																Enivironment Awareness</a></li>
+
+														<li><a href="/ot/lac" target="blank" id="RIV0034">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Lady Advisory
+																Committee
+															</a></li>
+
+														<li><a href="/ot/naac" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																NAAC</a></li>
+
+														<li><a href="/ot/nba" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																NBA</a></li>
+
+														<li><a href="/ot/snpetl" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																SNPETL</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody15"
+														aria-expanded="false"> <i class="fa fa-inr" style="width:23px"
+															;=""></i> Credentials </a></h4>
+											</div>
+											<div id="MenuBody15" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/cr/Gmail" target="blank" id="FIN0093">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>G-Mail</a>
+														</li>
+
+														<li><a href="/cr/MSTeams" target="blank" id="FIN0098">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Microsoft Teams</a></li>
+
+														<li><a href="/cr/CodeTantra" target="blank" id="FIN0094">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>CodeTantra</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody16"
+														aria-expanded="false"> <i class="fa fa-dot-circle-o"
+															style="width:23px" ;=""></i>Get in Touch</a></h4>
+											</div>
+											<div id="MenuBody16" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/gi/fe" target="blank" id="FE0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Feedback Form</a>
+														</li>
+
+														<li><a href="/gi/me" target="blank" id="FE0003">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Mentor Details</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody19"
+														aria-expanded="false"> <i class="fa-solid fa-lock"
+															style="width:23px" ;=""></i> My Account </a></h4>
+											</div>
+											<div id="MenuBody19" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/admin/password_change/" target="blank" id="CNTXXX1">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa-solid fa-lock"
+																	style="padding-right:2px;"></i> Change Password</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1" href="/#MenuBody17"
+														aria-expanded="false"> <i class="fa fa-object-group"
+															style="width:23px" ;=""></i> Contact us: </a></h4>
+											</div>
+
+											<div id="MenuBody17" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/co/Contact" target="blank" id="PAT0009">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>Contact-info</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div id="MenuBody14" class="panel-collapse collapse">
+											<div class="panel-body">
+												<ul class="nav">
+													<li><a href="" id="RIV0033">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																class="fa fa-dot-circle-o"
+																style="padding-right:2px;"></i>&nbsp;&nbsp;
+															Proshow/Merchandise</a></li>
+													<li><a href="" id="RIV0034">
+															&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																class="fa fa-dot-circle-o"
+																style="padding-right:2px;"></i>&nbsp;&nbsp; Events
+															Registration</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</aside>
+
+							</div>
+							<div id="button-panel">
+								<aside>
+
+									<script>
+										/*<![CDATA[*/
+
+										$(document).ready(function () {
+											$(".dropdown, .btn-group").hover(function () {
+												var dropdownMenu = $(this).children(".dropdown-menu");
+												if (dropdownMenu.is(":visible")) {
+													dropdownMenu.parent().toggleClass("open");
+												}
+											});
+										});
+
+										$(document).ready(function () {
+
+											$('a.btn.btn-default.btn-group-justified.dropdown-toggle').on('click', function (e) {
+												$("div[class='dropdown open']").removeClass('open');
+												$(this).parent().toggleClass('open');
+											});
+										});
+
+
+										$(document).ready(function () {
+											$('body').on('click', function (e) {
+												/*  				 		alert(e.target);
+																		alert($('a.btnList').is(e.target));
+												 */
+												if (!$('a.btnList').is(e.target) &&
+													$('a.btnList').has(e.target).length === 0 &&
+													$('.open').has(e.target).length === 0) {
+													$('a.btn.btn-default.btn-group-justified.dropdown-toggle').parent().removeClass(
+														'open');
+												}
+											});
+										});
+									</script>
+
+								</aside>
+							</div>
+
+							<div id="pageContent-wrapper">
+								<div id="page-wrapper" class="col-md-12 content-center">
+									<div>
+										<div class="modal fade" id="academicsModal" role="dialog">
+											<div class="modal-dialog">
+
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">ACADEMICS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal fade" id="eventsModal" role="dialog">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">EVENTS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal fade" id="coeModal" role="dialog">
+											<div class="modal-dialog">
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">COE</h4>
+													</div>
+													<div class="modal-body">
+
+
+														<ul class="news-slice">
+															<li class="text-primary news_card_text">
+																<a class="flash-link" target="_blank"
+																	href="https://vtop.vitap.ac.in/onlineexam/login"><span>
+																		<p>Online Assessment Link 1</p>
+																	</span></a>
+															</li>
+														</ul>
+
+														<ul class="news-slice">
+															<li class="text-primary news_card_text">
+																<a class="flash-link" target="_blank"
+																	href="https://vtop2.vitap.ac.in/onlineexam/login"><span>
+																		<p>Online Assessment Link 2</p>
+																	</span></a>
+															</li>
+														</ul>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="modal fade" id="othersModal" role="dialog">
+											<div class="modal-dialog">
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">OTHERS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="box box-info">
+											<div class="box-header">
+												<h4 class="box-title text-center"
+													style="font-weight: bold; height: 12px;">Spotlight</h4>
+											</div>
+
+											<div class="box-body">
+												<hr>
+												<button class="btn btn-primary btn-sm"
+													type="button">COE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+														class="badge badge-secondary">2</span></button>
+
+												<ul class="news-slice">
+													<li class="text-primary news_card_text">
+
+														<a class="flash-link" target="_blank"
+															href="{% static "Assg1.pdf" %}"><span>
+																<h4>Online Assessment Link 1</h4>
+															</span></a>
+
+													</li>
+												</ul>
+
+												<ul class="news-slice">
+													<li class="text-primary news_card_text">
+
+														<a class="flash-link" target="_blank"
+															href="{% static "Assg2.pdf" %}"><span>
+																<h4>Online Assessment Link 2</h4>
+															</span></a>
+
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+									<script>
+										toggleVTopMenu();
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<script src="{% static "dashboard_files/jquery-3.3.1.js.download" %}"></script>
+	<script src="{% static "dashboard_files/moment.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.hotkeys.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.slimscroll.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.blockUI.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery-ui.js.download" %}"></script>
+	<script src="{% static "dashboard_files/bootstrap.js.download" %}"></script>
+	<script src="{% static "dashboard_files/bootstrapValidator.js.download" %}"></script>
+	<script src="{% static "dashboard_files/vtop-validation.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/vit-custom.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/jquery.validationEngine-en.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/jquery.validationEngine.js.download" %}"></script>
+</body>
+
+</html>

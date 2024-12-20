@@ -1,0 +1,589 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+	<title>VIT-AP University</title>
+
+	<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+	<link rel="stylesheet" href="{% static "dashboard_files/jquery-ui.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/bootstrapValidator.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/AdminLteCompatibility.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/VTopScrollbar.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/VTop.css" %}">
+	<link rel="stylesheet" href="{% static "dashboard_files/scrollableTable.css" %}">
+	<script type="text/javascript" async="" src="{% static "dashboard_files/recaptcha__en.js.download" %}"
+		crossorigin="anonymous" integrity="sha384-/lfxU6PNOSdu+yg5CQ6Bqs112JrNtnIi8akxhIvAwfYc7bAJg4scSN/mdhay2j5Y" %}">
+	</script>
+	<script src="{% static "dashboard_files/jquery-3.3.1.js.download" %}" %}"></script>
+	<script src="https://kit.fontawesome.com/5859e30401.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;">
+	<div id="page_outline">
+		<div id="page-holder" class="trim">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top VTopHeader">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+
+							<div class="navbar-brand">
+								<span>
+									<span class="VITLogoStyle">VIT-AP</span></span>
+							</div>
+						</div>
+
+						<div id="navbar" class="navbar-collapse collapse">
+							<ul class="hidden-xs nav navbar-nav navbar-right" style="margin:auto;">
+								<li>
+									<a data-toggle="dropdown" class="dropdown-toggle small"
+										href="/#">
+										<span class="VTopHeaderStyle"><img
+												src="{% static "dashboard_files/navatar.png" %}"
+												class="img-circle img_icon_size" alt="User Image">
+											<span>Teacher's Portal</span>
+											<span><b class="caret"></b></span></span>
+									</a>
+									<ul class="dropdown-menu VTopHeaderMenu">
+										</li>
+										<li>
+											<div class="btn-group btn-group-justified">
+												<a class="btn btn-success" href="/admin/logout/">Sign out</a>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<script>
+					$(document).ready(function () {
+						$("body").css("padding-top", $(".navbar-fixed-top").height());
+					});
+
+
+					function toggleVTopMenu() {
+						$("#wrapper").toggleClass("menuDisplayed");
+						if (window.matchMedia('(max-width: 767px)').matches) {
+							$('#button-panel').toggle();
+						}
+					}
+
+					function toggleButtonMenuItem() {
+						if (window.matchMedia('(max-width: 767px)').matches) {
+							$('#button-panel').toggle();
+						}
+					}
+				</script>
+
+			</header>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 trim">
+						<div id="wrapper" class="">
+							<div id="sidebar-wrapper" class="hidden-xs nav nav-sidebar">
+								<aside>
+
+									<div class="panel-group" role="tablist" id="accordian1">
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody2"
+														aria-expanded="false"> <i class="fa fa-briefcase"
+															style="width:23px" ;=""></i> Info </a></h4>
+											</div>
+											<div id="MenuBody2" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/my/Credits" target="blank" id="ACD0233">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Credits
+																Distribution Scheme</a></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody3"
+														aria-expanded="false"> <i class="fa fa-info-circle"
+															style="width:23px" ;=""></i> Info Corner </a></h4>
+											</div>
+											<div id="MenuBody3" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/In/ViewCirculars" target="blank" id="ACD0147">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> View Circular(s)</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody5"
+														aria-expanded="false"> <i class="fa fa-graduation-cap"
+															style="width:23px" ;=""></i> Academics </a></h4>
+											</div>
+
+											<div id="MenuBody5" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+
+														<li><a href="/ac/timetable" target="blank" id="ACD0034">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Time Table</a></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody6"
+														aria-expanded="false"> <i class="fa fa-bank" style="width:23px"
+															;=""></i> Research </a></h4>
+											</div>
+
+											<div id="MenuBody6" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/re/MyResearchProfile2" target="blank" id="RSH0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> My Research
+																Profile</a></li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody7"
+														aria-expanded="false"> <i class="fa fa-book" style="width:23px"
+															;=""></i> Student Marks </a></h4>
+											</div>
+
+											<div id="MenuBody7" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/ex/Marks2" target="blank" id="EXM0011">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Student Marks Upload</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody8"
+														aria-expanded="false"> <i class="fa fa-space-shuttle"
+															style="width:23px" ;=""></i> Services </a></h4>
+											</div>
+											<div id="MenuBody8" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/se/ViewCourses2" target="blank" id="PAT0002">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Course Modification</a>
+														</li>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody9"
+														aria-expanded="false"> <i class="fa fa-bank" style="width:23px"
+															;=""></i> Library </a></h4>
+											</div>
+											<div id="MenuBody9" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/li/Ebook" target="blank" id="BON0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Books</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody10"
+														aria-expanded="false"> <i class="fa fa-certificate"
+															style="width:23px" ;=""></i> Bonafide </a></h4>
+											</div>
+											<div id="MenuBody10" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/bo/Bonafide" target="blank" id="BON0001">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Apply Bonafide</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody14"
+														aria-expanded="false"> <i class="fa fa-shield"
+															style="width:23px" ;=""></i>Co-Curricular Activities</a>
+												</h4>
+											</div>
+											<div id="MenuBody14" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+
+														<li><a href="/ot/eco" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																Enivironment Awareness</a></li>
+
+														<li><a href="/ot/lac" target="blank" id="RIV0034">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i> Lady Advisory
+																Committee
+															</a></li>
+
+														<li><a href="/ot/naac" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																NAAC</a></li>
+
+														<li><a href="/ot/nba" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																NBA</a></li>
+
+														<li><a href="/ot/snpetl" target="blank" id="RIV0033">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>
+																SNPETL</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody19"
+														aria-expanded="false"> <i class="fa-solid fa-lock"
+															style="width:23px" ;=""></i> My Account </a></h4>
+											</div>
+											<div id="MenuBody19" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/admin/password_change/" target="blank" id="CNTXXX1">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa-solid fa-lock"
+																	style="padding-right:2px;"></i> Change Password</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading" role="tab">
+												<h4 class="menu-title"><a data-toggle="collapse" class="text-capitalize"
+														data-parent="#accordian1"
+														href="/#MenuBody17"
+														aria-expanded="false"> <i class="fa fa-object-group"
+															style="width:23px" ;=""></i> Contact us: </a></h4>
+											</div>
+
+											<div id="MenuBody17" class="panel-collapse collapse">
+												<div class="panel-body">
+													<ul class="nav">
+														<li><a href="/co/Contact" target="blank" id="PAT0009">
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i
+																	class="fa fa-dot-circle-o"
+																	style="padding-right:2px;"></i>Contact-info</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										
+									</div>
+
+								</aside>
+
+							</div>
+							<div id="button-panel">
+								<aside>
+
+									<script>
+										/*<![CDATA[*/
+
+										$(document).ready(function () {
+											$(".dropdown, .btn-group").hover(function () {
+												var dropdownMenu = $(this).children(".dropdown-menu");
+												if (dropdownMenu.is(":visible")) {
+													dropdownMenu.parent().toggleClass("open");
+												}
+											});
+										});
+
+										$(document).ready(function () {
+
+											$('a.btn.btn-default.btn-group-justified.dropdown-toggle').on('click', function (e) {
+												$("div[class='dropdown open']").removeClass('open');
+												$(this).parent().toggleClass('open');
+											});
+										});
+
+
+										$(document).ready(function () {
+											$('body').on('click', function (e) {
+												/*  				 		alert(e.target);
+																		alert($('a.btnList').is(e.target));
+												 */
+												if (!$('a.btnList').is(e.target) &&
+													$('a.btnList').has(e.target).length === 0 &&
+													$('.open').has(e.target).length === 0) {
+													$('a.btn.btn-default.btn-group-justified.dropdown-toggle').parent().removeClass(
+														'open');
+												}
+											});
+										});
+
+									</script>
+
+								</aside>
+							</div>
+
+							<div id="pageContent-wrapper">
+								<div id="page-wrapper" class="col-md-12 content-center">
+									<div>
+										<div class="modal fade" id="academicsModal" role="dialog">
+											<div class="modal-dialog">
+
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">ACADEMICS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal fade" id="eventsModal" role="dialog">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">EVENTS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal fade" id="coeModal" role="dialog">
+											<div class="modal-dialog">
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">COE</h4>
+													</div>
+													<div class="modal-body">
+
+
+														<ul class="news-slice">
+															<li class="text-primary news_card_text">
+																<a class="flash-link" target="_blank"
+																	href="https://vtop.vitap.ac.in/onlineexam/login"><span>
+																		<p>Online Assessment Link 1</p>
+																	</span></a>
+															</li>
+														</ul>
+
+														<ul class="news-slice">
+															<li class="text-primary news_card_text">
+																<a class="flash-link" target="_blank"
+																	href="https://vtop2.vitap.ac.in/onlineexam/login"><span>
+																		<p>Online Assessment Link 2</p>
+																	</span></a>
+															</li>
+														</ul>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="modal fade" id="othersModal" role="dialog">
+											<div class="modal-dialog">
+												<!-- Modal content-->
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close"
+															data-dismiss="modal">×</button>
+														<h4 class="modal-title" style="color:red;">OTHERS</h4>
+													</div>
+													<div class="modal-body">
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default"
+															data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="box box-info">
+											<div class="box-header">
+												<h4 class="box-title text-center"
+													style="font-weight: bold; height: 12px;">Spotlight</h4>
+											</div>
+
+											<div class="box-body">
+												<hr>
+												<button class="btn btn-primary btn-sm"
+													type="button">COE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+														class="badge badge-secondary">2</span></button>
+
+												<ul class="news-slice">
+													<li class="text-primary news_card_text">
+
+														<a class="flash-link" target="_blank" href="{% static "Assg1.pdf" %}"><span>
+																<h4>Online Assessment Link 1</h4>
+															</span></a>
+
+													</li>
+												</ul>
+
+												<ul class="news-slice">
+													<li class="text-primary news_card_text">
+
+														<a class="flash-link" target="_blank" href="{% static "Assg2.pdf" %}"><span>
+																<h4>Online Assessment Link 2</h4>
+															</span></a>
+
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+									<script>
+										toggleVTopMenu();
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	</div>
+	<script src="{% static "dashboard_files/jquery-3.3.1.js.download" %}"></script>
+	<script src="{% static "dashboard_files/moment.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.hotkeys.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.slimscroll.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery.blockUI.js.download" %}"></script>
+	<script src="{% static "dashboard_files/jquery-ui.js.download" %}"></script>
+	<script src="{% static "dashboard_files/bootstrap.js.download" %}"></script>
+	<script src="{% static "dashboard_files/bootstrapValidator.js.download" %}"></script>
+	<script src="{% static "dashboard_files/vtop-validation.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/vit-custom.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/jquery.validationEngine-en.js.download" %}"></script>
+	<script type="text/javascript" src="{% static "dashboard_files/jquery.validationEngine.js.download" %}"></script>
+</body>
+</html>

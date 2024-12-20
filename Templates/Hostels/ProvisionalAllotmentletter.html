@@ -1,0 +1,449 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>VIT-AP University</title>
+    <link rel="icon" type="image/png" href="https://vtop2.vitap.ac.in/vtop/assets/img/favicon.png">
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/jquery-ui.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/bootstrap.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/bootstrapValidator.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/font-awesome.min.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/AdminLteCompatibility.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/VTopScrollbar.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/VTop.css" %}" >
+    <link rel="stylesheet" href="{% static "HostelRegistration_files/scrollableTable.css" %}" >
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+        }
+
+        .s1 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 10.5pt;
+        }
+
+        .s2 {
+            color: #030303;
+            font-family: "Times New Roman", serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 11.5pt;
+        }
+
+        .s3 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 10.5pt;
+        }
+
+        .s4 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 9.5pt;
+        }
+
+        .s5 {
+            color: #3D3D3D;
+            font-family: "Courier New", monospace;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 10pt;
+        }
+
+        .s6 {
+            color: #3D3D3D;
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 9.5pt;
+        }
+
+        .s7 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 24.5pt;
+        }
+
+        .s8 {
+            color: #3D3D3D;
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s9 {
+            color: #3D3D3D;
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 8.5pt;
+            vertical-align: 1pt;
+        }
+
+        .s10 {
+            color: #030303;
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 14.5pt;
+            vertical-align: 1pt;
+        }
+
+        .s11 {
+            color: #3D3D3D;
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 14.5pt;
+            vertical-align: 1pt;
+        }
+
+        .s12 {
+            color: #00F;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s13 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        .s14 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 7.5pt;
+        }
+
+        .s15 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 7.5pt;
+        }
+
+        .s19 {
+            color: #161616;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 9pt;
+        }
+
+        .s20 {
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 9.5pt;
+        }
+
+        li {
+            display: block;
+        }
+
+        #l1 {
+            padding-left: 0pt;
+            counter-reset: c1 1;
+        }
+
+        #l1>li>*:first-child:before {
+            counter-increment: c1;
+            content: counter(c1, decimal);
+            color: #030303;
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 8.5pt;
+        }
+
+        #l1>li:first-child>*:first-child:before {
+            counter-increment: c1 0;
+        }
+
+        table,
+        tbody {
+            vertical-align: top;
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;">
+
+    <div id="page_outline">
+        <div id="page-holder" class="trim">
+            <header>
+                <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+                    <div class="container">
+                        <img src="{% static "HostelRegistration_files/new VIT_AP logo.png" %}" class="img-responsive pull-left"
+                            alt="User Image" width="170" height="50">
+                        <h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;">V-Top</h3>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 trim">
+                        <div id="pageContent-wrapper">
+                            <div id="page-wrapper" class="col-md-12 content-center">
+                                <link rel="stylesheet" href="{% static "HostelRegistration_files/validationEngine.jquery.css" %}" >
+                                <link rel="stylesheet" href="{% static "HostelRegistration_files/sweetalert.css" %}" >
+                                <style>
+                                    h3.box-title {
+                                        text-transform: capitalize;
+                                    }
+                                </style>
+                                <div class="wrapper">
+                                    <div class="content-wrapper" id="page-wrapper">
+                                        <div class="container" id="main-section">
+                                            <section class="content-header">
+                                                <h2 align="center"></h2>
+                                            </section>
+                                            <section class="content">
+                                                <div class="col-sm-12 col-md-9 col-md-offset-1">
+                                                    <div class="box box-solid box-primary">
+                                                        <div style="text-align: center;">
+                                                            <span style="color: red; font-size: 25px;"></span>
+                                                        </div>
+                                                        <div class="box-body">
+                                                            <div class="" style="margin: 20px 20px 20px 20px;">
+                                                                <h1 align="center"> HOSTEL-ADMISSION-LETTER</h1>
+                                                                <table style="border-collapse:collapse;margin-left:5.79122pt" cellspacing="0">
+        <tr style="height:70pt">
+            <td
+            style="width:76pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+            <p style="text-indent: 0pt;text-align: left;"><br /></p>
+            <p style="padding-left: 3pt;text-indent: 0pt;text-align: left;"><span><img width="94" height="69"
+                        alt="image" src="{% static "ALLOTMENT_files/Image_002.jpg" %}" /></span></p>
+        </td>
+            <td style="width:379pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                colspan="3">
+                <p class="s2" style="padding-top: 3pt;padding-left: 2pt;text-indent: 0pt;text-align: center;">---------------------------------------------------</p>
+                <p class="s1"
+                    style="padding-left: 26pt;padding-right: 22pt;text-indent: 0pt;line-height: 16pt;text-align: center;">
+                    VIT-AP HOSTEL DEPARTMENT<span class="s3">- </span> <br> WIN-SEM 2022 HOSTEL ALLOTMENT
+                </p>
+            </td>
+        </tr>
+        <tr style="height:19pt">
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s4"
+                    style="padding-top: 6pt;padding-left: 2pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Hall
+                    Ticket No</p>
+            </td>
+            <td
+                style="width:132pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s5" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">50870050011
+                </p>
+            </td>
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s4"
+                    style="padding-top: 6pt;padding-left: 2pt;text-indent: 0pt;line-height: 11pt;text-align: left;">ADDMISSION NO
+                </p>
+            </td>
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s6" style="padding-top: 4pt;padding-left: 3pt;text-indent: 0pt;text-align: left;">21BCE9031</p>
+            </td>
+        </tr>
+        <tr style="height:19pt">
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s4"
+                    style="padding-top: 6pt;padding-left: 1pt;text-indent: 0pt;line-height: 7pt;text-align: left;">
+                    Candidate Name</p>
+                <p class="s7" style="text-indent: 0pt;line-height: 4pt;text-align: right;"></p>
+            </td>
+            <td
+                style="width:132pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s8"
+                    style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;line-height: 8pt;text-align: left;">
+                    KADIRI DEEPAK</p>
+                <p class="s7" style="text-indent: 0pt;line-height: 4pt;text-align: right;"></p>
+            </td>
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s4" style="padding-top: 6pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">Father&#39;s
+                    Name</p>
+            </td>
+            <td
+                style="width:133pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+                <p class="s8" style="padding-top: 5pt;padding-left: 2pt;text-indent: 0pt;text-align: left;">KADIRI
+                    SRINIVASA RAO</p>
+            </td>
+        </tr>
+        <tr style="height:439pt">
+            <td style="width:531pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                colspan="4">
+                <p class="s12" style="padding-top: 5pt;padding-left: 171pt;text-indent: 0pt;text-align: left;">
+                    PROVISIONAL ALLOTMENT ORDER</p>
+                <p class="s13"
+                    style="padding-top: 7pt;padding-left: 1pt;padding-right: 10pt;text-indent: 17pt;line-height: 139%;text-align: justify;">
+                    This is to inform you that the options exercised by you, have been processed and the Allotment of Hostel is done</p>
+                <p class="s14" style="padding-top: 3pt;padding-left: 134pt;text-indent: 0pt;text-align: left;"> ROOM.No:506<br> 4th Floor<br> BLOCK-D</p>
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                <p class="s14" style="padding-left: 134pt;text-indent: 0pt;text-align: left;">Hostel Fee fixed for the
+                    college/course is Rs. 70000/-.</p>
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                <p class="s14" style="padding-left: 134pt;text-indent: 0pt;text-align: left;">Hostel fee to be paid by
+                    the candidate at the time of admission is Rs. 70000/-.</p>
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                <p class="s14" style="padding-left: 1pt;text-indent: 0pt;text-align: left;">Instructions to Candidates
+                    <span class="s15">:</span></p>
+                <p style="text-indent: 0pt;text-align: left;"><br /></p>
+                <ol id="l1">
+                    <li data-list-text="1.">
+                        <p class="s13" style="padding-left: 13pt;text-indent: -9pt;text-align: left;">The candidate is
+                            instructed to download the allotment order from https:/<span
+                                style=" color: #262626;">/</span>VIT<span style=" color: #3D3D3D;">.</span>ap<span
+                                style=" color: #3D3D3D;">.</span><span style=" color: #3D3D3D;">.</span>in <span
+                                style=" color: #262626;">.</span></p>
+                    </li>
+                    <li data-list-text="2.">
+                        <p class="s13" style="padding-top: 7pt;padding-left: 13pt;text-indent: -10pt;text-align: left;">
+                            The candidate is instructed to report by clicking on <span
+                                style=" color: #262626;">&quot;Self-Reporting&quot; </span>under <span
+                                style=" color: #3D3D3D;">&quot;</span>Forms<span style=" color: #262626;">&quot;
+                            </span>tab from website https://VIT<span style=" color: #3D3D3D;">.</span>ap<span
+                                style=" color: #3D3D3D;">.</span>.in .</p>
+                    </li>
+                    <li data-list-text="3.">
+                        <p class="s13"
+                            style="padding-top: 7pt;padding-left: 1pt;padding-right: 12pt;text-indent: 2pt;line-height: 139%;text-align: left;">
+                            Further the candidate is instructed to take print out of two copies of joining report and
+                            allotment order and report to the allotted College. Submit a copy of joining report,
+                            allotment order and obtain acknowledgement on 2nd copy of joining report from the College
+                            where you have reported and retain with you.</p>
+                    </li>
+                    <li data-list-text="4.">
+                        <p class="s13"
+                            style="padding-top: 3pt;padding-left: 1pt;padding-right: 7pt;text-indent: 2pt;line-height: 138%;text-align: left;">
+                            The candidate is instructed that Self reporting and reporting at the allotted college is
+                            compulsory to retain the present allotment. The last date for Self-reporting and reporting
+                            at the allotted college is 22.11.2021.</p>
+                    </li>
+                    <li data-list-text="5.">
+                        <p class="s13"
+                            style="padding-top: 4pt;padding-left: 1pt;padding-right: 2pt;text-indent: 2pt;line-height: 139%;text-align: left;">
+                            If the candidate do not report through self-reporting system and/or not reporting at the
+                            allotted college, the provisional allotment will be treated as a vacancy for the subsequent
+                            phase and the provisional allotment of 1st phase will automatically stands cancelled and the
+                            candidate has no claim on the seat allotted<span style=" color: #575757;">.</span></p>
+                    </li>
+                    <li data-list-text="6.">
+                        <p class="s13"
+                            style="padding-top: 3pt;padding-left: 1pt;padding-right: 8pt;text-indent: 2pt;line-height: 140%;text-align: left;">
+                            It is informed that the academic credentials verified if found false at a later date, the
+                            candidate&#39;s allotment will be cancelled and the candidate is liable for criminal
+                            prosecution<span style=" color: #3D3D3D;">.</span></p>
+                    </li>
+                    <li data-list-text="7.">
+                        <p class="s13"
+                            style="padding-top: 3pt;padding-left: 1pt;padding-right: 4pt;text-indent: 2pt;line-height: 139%;text-align: left;">
+                            It is instructed that the candidate is not required to deposit original certificates in the
+                            college/Institute at the time of admission. The candidate can produce original certificates
+                            only for the purpose of verification in the college/Institute and can submit only Xerox
+                            copies in the college/Institute<span style=" color: #575757;">.</span></p>
+                    </li>
+                    <li data-list-text="8.">
+                        <p class="s13"
+                            style="padding-top: 3pt;padding-left: 1pt;padding-right: 1pt;text-indent: 2pt;line-height: 139%;text-align: left;">
+                            Further is instructed that the candidates who are not eligible for fee reimbursement shall
+                            pay the Hostel fee after final phase only<span style=" color: #3D3D3D;">. </span>In this
+                            regard, the College managements are instructed not to collect any type of fee from the
+                            candidates till the final phase of admissions<span style=" color: #3D3D3D;">.</span></p>
+                    </li>
+                    <li data-list-text="9.">
+                        <p class="s13"
+                            style="padding-top: 3pt;padding-left: 13pt;text-indent: -10pt;line-height: 10pt;text-align: left;">
+                        Hostels work will commence from 22.11.2021.</p>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr style="height:102pt">
+            <td style="width:531pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                colspan="4">
+                <p style="padding-left: 462pt;text-indent: 0pt;text-align: left;"><span><img width="88" height="87"
+                            alt="image" src="{% static "ALLOTMENT_files/Image_003.jpg" %}" /></span></p>
+                <p class="s4"
+                    style="padding-top: 6pt;padding-left: 383pt;text-indent: 88pt;line-height: 15pt;text-align: right;">
+                    VIT-AP University</p>
+            </td>
+        </tr>
+        <tr style="height:14pt">
+            <td style="width:531pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+                colspan="4">
+                <p class="s19"
+                    style="padding-top: 1pt;padding-left: 2pt;text-indent: 0pt;line-height: 10pt;text-align: left;">***
+                    <span class="s20">This computer generated Provisional Allotment Order does not require any
+                        authentication. </span><span style=" color: #030303;">***</span></p>
+            </td>
+        </tr>
+    </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

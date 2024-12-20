@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>VIT-AP University</title>
+	<link rel="icon" type="image/png" href="https://vtop2.vitap.ac.in/vtop/assets/img/favicon.png">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/jquery-ui.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/bootstrap.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/bootstrapValidator.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/font-awesome.min.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/AdminLteCompatibility.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/VTopScrollbar.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/VTop.css" %}">
+	<link rel="stylesheet" href="{% static "HostelRegistration_files/scrollableTable.css" %}">
+    <script src="https://kit.fontawesome.com/5859e30401.js" crossorigin="anonymous"></script>
+	<style>
+		#Category{
+			background-color: #d4d3d3;
+			font-weight: bold;
+		}
+		#Available{
+			background-color: #f2dede;
+		}
+	</style>
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;">
+
+	<div id="page_outline">
+		<div id="page-holder" class="trim">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+					<div class="container">
+						<img src="{% static "HostelRegistration_files/new VIT_AP logo.png" %}" class="img-responsive pull-left" alt="User Image" width="170" height="50">
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;">V-Top</h3>
+					</div>
+				</nav>
+			</header>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 trim">
+						<div id="pageContent-wrapper">
+							<div id="page-wrapper" class="col-md-12 content-center">
+								<link rel="stylesheet" href="{% static "HostelRegistration_files/validationEngine.jquery.css" %}">
+								<link rel="stylesheet" href="{% static "HostelRegistration_files/sweetalert.css" %}">
+								<style>
+									h3.box-title {
+										text-transform: capitalize;
+									}
+								</style>
+								<div class="wrapper">
+									<div class="content-wrapper" id="page-wrapper">
+										<div class="container" id="main-section">
+											<section class="content-header"><h2 align="center"></h2></section>
+											<section class="content">
+												<div class="col-sm-12 col-md-9 col-md-offset-1">
+													<div class="box box-solid box-primary">
+														<div style="text-align: center;">
+															<span style="color: red; font-size: 25px;"></span>
+														</div>
+															<div class="box-body">
+																<div class="" style="margin: 20px 20px 20px 20px;">
+																	<h3 align="center">FEE-RECEIPT</h3>
+																	<br> 
+																	<div class="container-fluid">
+																		<div class="box-body ">
+																			<div style="height: 10px;"></div>
+																			<table class="table noborder">
+																				<tbody>
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Receipt
+																							Number</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							284</td>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Name</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							KADIRI DEEPAK</td>
+																					</tr>
+														
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Receipt Date</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							20-Jan-2022</td>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Application
+																							Number/Register Number</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							21BCE9031 / 2021998587</td>
+																					</tr>
+														
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Payment
+																							Year</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							1</td>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Campus</th>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							AMARAVATI</td>
+																					</tr>
+														
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Program
+																							Name</th>
+																						<td style=" font-size: 12px; padding: 1px !important;" colspan="3">B.Tech. - Computer
+																							Science and
+																							Engineering</td>
+																					</tr>
+														
+																				</tbody>
+																			</table>
+																			<hr>
+																			<div style="font-weight: bold; font-size: 15px; text-decoration: underline; "
+																				class="text text-primary text-center">College Fees</div>
+																			<table class="table">
+																				<thead>
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							S.No</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Description</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;"
+																							class="text-right">Amount</th>
+																					</tr>
+																				</thead>
+														
+																				<tbody>
+																					<tr>
+																						<td class="col-md-1" style=" font-size: 12px; padding: 1px !important;">
+																							1</td>
+																						<td class="col-md-4" style=" font-size: 12px; padding: 1px !important;">
+																							Tuition Fee</td>
+																						<td class="col-md-5 text-right" style=" font-size: 13px; padding: 1px !important;">
+																							70,000.00</td>
+																					</tr>
+														
+																					<tr>
+																						<td class="col-md-1" style=" font-size: 12px; padding: 1px !important;">
+																							2</td>
+																						<td class="col-md-4" style=" font-size: 12px; padding: 1px !important;">
+																							Caution Deposit (Refundable)</td>
+																						<td class="col-md-5 text-right" style=" font-size: 13px; padding: 1px !important;">
+																							3,000.00</td>
+																					</tr>
+																				</tbody>
+																			</table>
+														
+																			<div style="font-weight: bold; font-size: 15px; text-decoration: underline; "
+																				class="text text-primary text-center">Miscellaneous
+																				Fees</div>
+																			<table class="table">
+																				<thead>
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							S.No</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Description</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;"
+																							class="text-right">Amount</th>
+																					</tr>
+																				</thead>
+														
+																				<tbody>
+																					<tr>
+																						<td style=" font-weight: bold; font-size: 12px; padding: 1px !important;"
+																							class="col-md-1">1</td>
+																						<td style=" font-size: 12px; padding: 1px !important;" class="col-md-4">Admission Fee
+																							(Non-refundable)
+																						</td>
+																						<td style=" font-size: 12px; padding: 1px !important;" class="col-md-5 text-right">
+																							10,000.00</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<div style="font-weight: bold; font-size: 15px; " class="text text-primary text-center"></div>
+																			<div style="font-weight: bold; font-size: medium; " class="text text-primary text-right">Grand Total
+																				:
+																				₹83,000.00</div>
+																			<div style="font-weight: bold;  text-align: right;" class="text">(Rupees Eighty Three Thousand only)
+																			</div>
+																			<table class="table">
+																				<thead>
+																					<tr>
+																						<th class="text-center" colspan="4"
+																							style="font-weight: bold; font-size: 15px; text-decoration: underline;">
+																							Payment
+																							Details</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Payment
+																							Mode</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							Bank
+																							Name</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;">
+																							DD
+																							No/Online Transaction Id.</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;"
+																							class="text-right">Amount</th>
+																						<th style=" font-weight: bold; font-size: 12px; padding: 1px !important;"
+																							class="text-right">Remarks</th>
+																					</tr>
+																					<tr>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							DD</td>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							INDIAN BANK</td>
+																						<td style=" font-size: 12px; padding: 1px !important;">
+																							063098</td>
+																						<td style=" font-size: 12px; padding: 1px !important;" class="text-right">83,000.00</td>
+																						<td style=" font-size: 12px; padding: 1px !important;" class="text-right">
+																							<div>
+																								<p>DD</p>
+																							</div>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																			<div></div>
+																			<div id="signature" class="col-md-offset-2 col-md-10 text-right "
+																				style="font-weight: bold; font-size: 12px;">Signature</div>
+																			<div id="btnFamilly">
+																				<div class="col-md-12" style="float: left; margin: auto;">
+																					<a type="button"  href="{% static "Payment.pdf" %}" class="btn btn-success form-control" target="_blank"
+																						style="float: left; width: auto;"> <span
+																							class="glyphicon glyphicon-print"></span>&nbsp;&nbsp;Print
+																						Receipt
+																					</a>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																</div>
+															</div>
+													</div>
+												</div>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

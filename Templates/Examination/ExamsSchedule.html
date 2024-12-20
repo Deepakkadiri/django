@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Exam Schedule</title>
+	<link rel="icon" type="image/png" href="https://vtop2.vitap.ac.in/vtop/assets/img/favicon.png">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/jquery-ui.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/bootstrap.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/bootstrapValidator.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/font-awesome.min.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/AdminLteCompatibility.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/VTopScrollbar.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/VTop.css"  %}">
+	<link rel="stylesheet" href="{% static "ExamSchedule_files/scrollableTable.css"  %}">
+</head>
+
+<body class="VTopBody" style="padding-top: 50px;" align="center">
+	<div id="page_outline">
+		<div id="page-holder" class="trim">
+			<header>
+				<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#2980B9;color:#EAF2F8">
+					<div class="container">
+						<img src="{% static "test_files/new VIT_AP logo.png"  %}" class="img-responsive pull-left" alt="User Image"
+							width="170" height="50">
+						<h3 class="pull-right" style="color: #fff;font-family:Times; font-size: 24px;">V-Top</h3>
+					</div>
+				</nav>
+				<div id="main-section">
+					<div id="main-section">
+						<!-- Main content -->
+						<section class="content">
+							<div class="col-sm-12">
+								<div class="box box-info">
+									<div class="box-header with-border">
+										<h3 align="center" class="box-title">Exam Schedule</h3>
+									</div>
+									<div class="box-body">
+										<form role="form" id="examSchedule" method="post" autocomplete="off">
+												<div align="center">
+													<div class="form-group">
+														<div>
+															<span
+																style="font-size: 15px; color: red; text-align: left;"><b>Exam
+																	Reporting Time </b> : 30 minutes before
+																schedule</span>
+														</div>
+														<div>
+															<span
+																style="font-size: 15px; color: red; text-align: left;"></span>
+														</div>
+													</div>
+												</div>
+												
+												<table class="customTable">
+													<tbody>
+														<tr class="tableHeader">
+															<td style="width: 5%;"><span>S.No.</span></td>
+															<td style="width: 8%;"><span>Course Code</span></td>
+															<td style="width: 18%;"><span>Course Title</span></td>
+															<td style="width: 5%;"><span>Course Type</span></td>
+															<td style="width: 10%;"><span>Class ID</span></td>
+															<td style="width: 10%;"><span>Slot</span></td>
+															<td style="width: 10%;"><span>Exam Date</span></td>
+															<td style="width: 5%;"><span>Exam Session</span></td>
+															<td style="width: 5%;"><span>Reporting Time</span></td>
+															<td style="width: 14%;"><span>Exam Time</span></td>
+														</tr>
+														<tr class="tableContent">
+															<td class="panelHead-secondary" colspan="14" align="center">
+																FAT</td>
+														</tr>
+														<tr class="tableContent">
+															<td style="width: 5%;">1</td>
+															<td style="width: 8%;">CSE1012</td>
+															<td style="width: 18%;">Problem Solving using Python</td>
+															<td style="width: 5%;">ETH</td>
+															<td style="width: 10%;">AP2021223000019</td>
+															<td style="width: 10%;">A+TA</td>
+															<td style="width: 10%;">07-June-2022</td>
+															<td style="width: 5%;">AN</td>
+															<td style="width: 14%;">01:30 PM</td>
+															<td style="width: 14%;">02:00 PM - 04:20 PM</td>
+														</tr>
+														<tr class="tableContent">
+															<td style="width: 5%;">2</td>
+															<td style="width: 8%;">ECE1002</td>
+															<td style="width: 18%;">Fundamentals of Electrical and
+																Electronics Engineering</td>
+															<td style="width: 5%;">ETH</td>
+															<td style="width: 10%;">AP2021223000025</td>
+															<td style="width: 10%;">B+TB</td>
+															<td style="width: 10%;">08-June-2022</td>
+															<td style="width: 5%;">AN</td>
+															<td style="width: 14%;">01:30 PM</td>
+															<td style="width: 14%;">02:00 PM - 04:20 PM</td>
+														</tr>
+														<tr class="tableContent">
+															<td style="width: 5%;">3</td>
+															<td style="width: 8%;">MAT1001</td>
+															<td style="width: 18%;">Calculus for Engineers</td>
+															<td style="width: 5%;">ETH</td>
+															<td style="width: 10%;">AP2021223000033</td>
+															<td style="width: 10%;">C+TC</td>
+															<td style="width: 10%;">09-June-2022</td>
+															<td style="width: 5%;">AN</td>
+															<td style="width: 14%;">01:30 PM</td>
+															<td style="width: 14%;">02:00 PM - 04:20 PM</td>
+														</tr>
+														<tr class="tableContent">
+															<td style="width: 5%;">4</td>
+															<td style="width: 8%;">PHY1008</td>
+															<td style="width: 18%;">Modern Physics</td>
+															<td style="width: 5%;">ETH</td>
+															<td style="width: 10%;">AP2021223000053</td>
+															<td style="width: 10%;">D+TD</td>
+															<td style="width: 10%;">10-June-2022</td>
+															<td style="width: 5%;">AN</td>
+															<td style="width: 14%;">01:30 PM</td>
+															<td style="width: 14%;">02:00 PM - 04:20 PM</td>
+														</tr>
+														<tr class="tableContent">
+															<td style="width: 5%;">5</td>
+															<td style="width: 8%;">ENG1001</td>
+															<td style="width: 18%;">English for Essential Communication
+															</td>
+															<td style="width: 5%;">ETH</td>
+															<td style="width: 10%;">AP2021223000041</td>
+															<td style="width: 10%;">E</td>
+															<td style="width: 10%;">11-June-2022</td>
+															<td style="width: 5%;">AN</td>
+															<td style="width: 14%;">01:30 PM</td>
+															<td style="width: 14%;">02:00 PM - 04:20 PM</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</form>
+</body>
+</html>
