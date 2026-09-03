@@ -1,4 +1,4 @@
-# django
+# Simple python application using django
 Principal - vtop
 ECE - Teacher@ece
 MAT - Teacher@MAT
